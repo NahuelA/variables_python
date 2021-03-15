@@ -34,6 +34,30 @@ def ej1():
       ej: La suma entre 4.2 y 6.5 es 10.7
 
     '''
+    print("Nuestra primera calculadora en python!!!")
+    print("Ingrese un número")
+    num1 = float(input())
+    print("")
+    print("Ingrese otro número")
+    num2 = float(input())
+    #operations
+		
+    suma = num1 + num2
+    print("El resultado de su suma es:",suma)
+
+    resta = num1 - num2
+    print("El resultado de su resta es:",resta)
+
+    multiplicacion = num1 * num2
+    print("El resultado de su multiplicación es:",multiplicacion)
+
+    division = num1 - num2
+    print("El resultado de su división es:",division)
+
+    potencia = num1 ** num2
+    print("El resultado de su potencia es:",potencia)
+	#realizado
+
 
 
 def ej2():
@@ -53,8 +77,12 @@ def ej2():
       altura de la persona
       Nuevamente debe aclarar el campo de cada uno, para el que lo lea
       entienda de que se está hablando.
-
     '''
+
+    nombreCompleto = str(input("Ingrese su nombre completo:"))
+	dni = str(input("Ingrese su DNI:"))
+
+
 
 
 def ej3():
@@ -154,7 +182,7 @@ def ej5():
 if __name__ == '__main__':
     print("Ejercicios de práctica")
     ej1()
-    # ej2()
+    ej2()
     # ej3()
     # ej4()
     # ej5()
