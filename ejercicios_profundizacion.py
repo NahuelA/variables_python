@@ -15,10 +15,10 @@ __author__ = "Inove Coding School"
 __email__ = "alumnos@inove.com.ar"
 __version__ = "1.3"
 
-
 def ej1():
     # Ejercicios de práctica con números
-    print('Nuestra primera calculadora')
+    print('Nuestra primera calculadora en python!')
+    print("")
     '''
     Realice un calculadora, se ingresará por línea de comando dos
     números reales y se deberá calcular todas las operaciones entre ellos:
@@ -34,34 +34,51 @@ def ej1():
       ej: La suma entre 4.2 y 6.5 es 10.7
 
     '''
-    print("Nuestra primera calculadora en python!!!")
     print("Ingrese un número")
     num1 = float(input())
     print("")
     print("Ingrese otro número")
     num2 = float(input())
     #operations
-		
-    suma = num1 + num2
-    print("El resultado de su suma es:",suma)
 
-    resta = num1 - num2
-    print("El resultado de su resta es:",resta)
+    print("Qué operación deseas realizar?")
+    print("Presiona 0 para suma")
+    print("Presiona 1 para resta")
+    print("Presiona 2 para multiplicación")
+    print("Presiona 3 para división")
+    print("Presiona 4 para potencia")
 
-    multiplicacion = num1 * num2
-    print("El resultado de su multiplicación es:",multiplicacion)
-
-    division = num1 - num2
-    print("El resultado de su división es:",division)
-
-    potencia = num1 ** num2
-    print("El resultado de su potencia es:",potencia)
-	#realizado
+    operator = int(input())
+    
+    if operator == 0:
+        suma = num1 + num2
+        print("El resultado de su suma es:",suma)
+    elif operator == 1:
+        resta = num1 - num2
+        print("El resultado de su resta es:",resta)
+    elif operator == 2:
+        multiplicacion = num1 * num2
+        print("El resultado de su multiplicación es:",multiplicacion)
+    elif operator == 3:
+        division = num1 - num2
+        print("El resultado de su división es:",division)
+    elif operator == 4:
+        potencia = num1 ** num2
+        print("El resultado de su potencia es:",potencia)
+    else:
+        print("Ninguna de las opciones es correcta, elige otra operación:")
+        print("Presiona 0 para suma")
+        print("Presiona 1 para resta")
+        print("Presiona 2 para multiplicación")
+        print("Presiona 3 para división")
+        print("Presiona 4 para potencia")
+    #realizado
 
 
 
 def ej2():
     print('Ejercicios de práctica numérica y cadenas')
+    
     '''
     Realice un programa que consulte por consola:
     - El nombre completo de la persona
@@ -78,10 +95,14 @@ def ej2():
       Nuevamente debe aclarar el campo de cada uno, para el que lo lea
       entienda de que se está hablando.
     '''
+    nombre_completo = str(input("Cuál es su nombre completo?"))
+    dni = int(input("Cuál es su DNI?"))
+    edad = int(input("Cuál es su edad?"))
+    altura = float(input("Cuál es su altura?"))
 
-    nombreCompleto = str(input("Ingrese su nombre completo:"))
-	dni = str(input("Ingrese su DNI:"))
-
+    print("Nombre completo:",nombre_completo,"DNI:",dni)
+    print("Nombre completo:",nombre_completo,"Edad:",edad,"Altura:",altura)
+    #realizado
 
 
 
@@ -117,6 +138,16 @@ def ej3():
     Cualquier duda con el método split pueden consultarla por el campus
 
     '''
+    nombre_completo_padre = str(input("Ingrese el primer nombre y apellido del padre: "))
+    nombre_completo_madre = str(input("Ingrese el primer nombre y apellido de la madre: "))
+    nombre_hijo = str(input("Ingrese el nombre del hijo: "))
+
+    split_surname_m = nombre_completo_madre.split(" ")
+    split_surname_p = nombre_completo_padre.split(" ")
+
+    print(nombre_hijo,split_surname_p[1],split_surname_m[1])
+    #realizado
+
 
 
 def ej4():
@@ -151,6 +182,18 @@ def ej4():
 
     Cualquier duda con el método split pueden consultarla por el campus
     '''
+    nombre_1 = str(input("Ingresa el primer nombre y apellido: ")).capitalize()
+    nombre_2 = str(input("Ingresa el segundo nombre y apellido: ")).capitalize()
+
+    split_1 = nombre_1.split(" ")
+    split_2 = nombre_2.split(" ")
+
+    if split_1[1] == split_2[1]:
+        print("Genial!",nombre_1,"es pariente de",nombre_2)
+    else:
+        print("Ups!",nombre_1,"no pertenece a la familia de",nombre_2)
+    #realizado
+
 
 
 def ej5():
@@ -177,12 +220,21 @@ def ej5():
 
     Cualquier duda con estos métodos pueden consultarla por el campus
     '''
+    nombre_completo = str(input("Ingresa tu nombre completo: "))
+
+    new_name = nombre_completo.split(" ")
+
+    print(nombre_completo.lower())
+    print(nombre_completo.upper())
+    print(new_name[0].capitalize(),new_name[1])
+    #realizado
+
 
 
 if __name__ == '__main__':
     print("Ejercicios de práctica")
-    ej1()
-    ej2()
+    # ej1()
+    # ej2()
     # ej3()
     # ej4()
     # ej5()
